@@ -269,7 +269,6 @@
 }
 .data-logo {
   width: 40px;
-  height: auto;
 }
 
 /*Mobile Security*/
@@ -413,25 +412,83 @@
 /*Demo Section*/
 .demo-section {
   background-color: #f5f7fa;
-  height: 33vh;
+  padding-bottom: 1.5rem;
 }
 
 .demo-section > h2 {
   text-align: center;
   font-size: 3rem;
   padding: 1rem 20rem 1rem 20rem;
-  margin-bottom:0px ;
+  margin-bottom: 0px;
 }
 
 .demo-section > button {
-  margin: 0rem 35rem;
+  margin: 0rem 35rem; /**/
   height: 1rem;
 }
 
 /*Footer*/
 
-.footer {
+.footer-container {
+  display: grid;
+  color: #f5f7fa;
   background-color: #263238;
-  height: 50vh;
-  padding: 1rem 6rem ;
+  padding: 3rem 9rem;
+  column-gap: 4rem;
+  grid-template-columns: 6fr 2fr 2fr 2fr;
+  justify-content: space-between;
+}
+
+.footer-container > div > .columnn-title {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 140% */
+}
+
+.footer-container > div > .footer-logo {
+  padding: 1rem 0rem;
+}
+.footer-container > div > .copyright {
+  padding: 1rem 0rem;
+  color: #90a0a9;
+}
+
+.footer-container > div > .socials {
+  display: inline-flex;
+  padding: 1rem 0rem;
+  gap: 1rem;
+}
+.footer-container > div > .column-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  color: #90a0a9;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.footer-column > .input-container {
+  width: 15rem;
+  height: 1rem;
+  flex-shrink: 0;
+  border-radius: 8px;
+  padding: 0.8rem 0.5rem;
+  background-color: #515b60;
+}
+.footer-column > .input-container > .newsletter {
+  background-color: #515b60;
+  color: #90a0a9;
+  border-width: 0px;
+  display: inline;
+  position: relative;
+  justify-content: space-between;
+  top: -0.3rem;
+}
+.footer-column > .input-container > img {
+  position: relative;
+  left: 1.5rem;
 }
