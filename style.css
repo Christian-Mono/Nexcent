@@ -3,30 +3,29 @@
   justify-content: center;
 }
 
-/*NAVBAR*/
+/*--------------NAVBAR--------------*/
 .navbar {
   display: flex;
   box-sizing: border-box;
   position: static;
   align-items: center;
-  padding-left: 3rem;
-  padding-top: 30px;
-  padding-right: 3rem;
-  padding-bottom: 30px;
+  padding: 2rem 3rem 2rem 3rem;
   top: 0;
   left: 0;
   right: 0;
   background-color: #f6f7fb;
 }
 
-.navbar > .logo {
-  position: relative;
-  gap: 8px;
-  width: 25%;
-  float: left;
+.navbar > .nav-menu > .nav-item > .nav-link:hover {
+  color: #4caf4f;
 }
 
-.navbar > .nav-item {
+.navbar > .nav-logo {
+  position: relative;
+  padding: 0rem 2rem;
+}
+
+.navbar > .nav-menu {
   display: flex;
   position: relative;
   gap: 16px;
@@ -34,23 +33,32 @@
   line-height: 24px;
   justify-content: space-between;
   font-size: 16px;
-  width: 50%;
-  float: center;
+  flex: 1;
+}
+
+.navbar > .nav-menu > li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar > .nav-menu > li > a {
+  text-decoration: none;
+  color: #18191f;
 }
 
 .navbar > .nav-account {
   display: flex;
-  width: auto;
-  gap: 14px;
-  width: 25%;
-  float: right;
+  width: 15rem;
+  gap: 1rem;
+  padding-left: 6rem;
 }
 .navbar > .nav-account > .login-btn {
   color: #4caf4f;
-  border: 0px;
   border-radius: 5%;
   border-width: 0px;
   background-color: #f6f7fb;
+  padding: 1rem 2rem;
 }
 .navbar > .nav-account > .green-btn {
   color: white;
@@ -58,9 +66,10 @@
   border-radius: 5%;
   border-color: #4caf4f;
   border-width: 0px;
+  padding: 1rem 2rem;
 }
 
-/*HOME*/
+/*--------------HOME--------------*/
 .home {
   display: flex;
   padding: 5rem 5rem;
@@ -68,7 +77,7 @@
   gap: 3rem;
   background-color: #f6f7fb;
 }
-.title {
+.home > .title {
   display: inline;
   color: #4d4d4d;
   font-size: 4rem;
@@ -76,7 +85,7 @@
   font-weight: 600;
   line-height: 76px;
 }
-.green-title {
+.home > .title > .green-title {
   color: #4caf4f;
   font-size: 64px;
   font-style: normal;
@@ -107,7 +116,7 @@
   height: 25rem;
 }
 
-/* CLIENTS */
+/*--------------CLIENTS--------------*/
 
 .clients {
   position: relative;
@@ -143,7 +152,7 @@
   padding: 2rem 0rem;
 }
 
-/* COMMUNITY */
+/*--------------COMMUNITY--------------*/
 
 .community {
   position: relative;
@@ -179,16 +188,30 @@
   justify-content: space-around;
 }
 
-/*PIXELGRADE section*/
+.community-services > .membership {
+  box-shadow: 0px 2px 4px 0px #abbed133;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.community-services > .membership > .membership-title {
+  color: #4d4d4d;
+}
+
+/*--------------PIXELGRADE section--------------*/
 .pixelgrade-container {
   display: flex;
   padding: 5rem 5rem;
   align-items: center;
   gap: 3rem;
 }
+.pixelgrade-container > .pixelgrade-image > img {
+  width: 22rem;
+}
 
 .pixelgrade-container > div > .pixelgrade-title {
   font-size: 36px;
+  color: #4d4d4d;
   font-weight: 600;
   line-height: 44px;
   letter-spacing: 0em;
@@ -199,13 +222,15 @@
 .pixelgrade-container > div > .pixelgrade-text {
   position: relative;
   top: -10px;
+  color: #717171;
   font-size: 14px;
   font-weight: 400;
   line-height: 1rem;
   letter-spacing: 0em;
+  padding: 0rem 5rem 1rem 0rem;
 }
 
-/*nexcent data numbers*/
+/*--------------NEXCENT DATAS--------------*/
 .nexcent-data-container {
   display: flex;
   padding: 20px 105px 20px 105px;
@@ -237,7 +262,7 @@
 
 .nexcent-grid-container {
   display: grid;
-  width: 100%;
+
   align-content: center;
   grid-template-columns: auto auto;
   gap: 2rem;
@@ -271,14 +296,16 @@
   width: 40px;
 }
 
-/*Mobile Security*/
+/*--------------MOBILE SECURITY--------------*/
 .mobile-security {
   padding: 2rem 8rem 1rem 8rem;
   display: flex;
   gap: 1rem;
 }
-
-.mobile-login-text > h3 {
+.mobile-login-icon > img {
+  width: 22rem;
+}
+.mobile-security > .mobile-login-text .mobile-login-text > h3 {
   font-size: 2rem;
   text-align: start;
   margin-bottom: 0px;
@@ -296,7 +323,7 @@
   padding-bottom: 1rem;
 }
 
-/*Customers*/
+/*--------------CUSTOMER--------------*/
 .customers {
   display: flex;
   gap: 3rem;
@@ -344,7 +371,7 @@
   line-height: 28px;
 }
 
-/*Care Marketing*/
+/*--------------CARE MARKETING--------------*/
 
 .care-marketing {
   text-align: center;
@@ -366,7 +393,7 @@
   line-height: 24px; /* 150% */
 }
 
-/*readmore cards*/
+/*--------------READMORE CARDS--------------*/
 
 .readmore-container {
   display: grid;
@@ -396,6 +423,9 @@
   width: 80%;
   margin: 0px 10% 0px 10%;
   border-radius: 5px;
+  box-shadow: 0px 8px 16px 0px #abbed166;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 .readmore-textbox > .readmore-text {
   padding: 0rem 1rem 1rem 1rem;
@@ -403,16 +433,20 @@
   line-height: 28px;
   letter-spacing: 0em;
   text-align: center;
+  color: #717171;
 }
 .readmore-textbox > .green-arrow {
   color: #4caf4f;
   font-weight: bold;
 }
 
-/*Demo Section*/
+/*--------------DEMO SECTION--------------*/
 .demo-section {
   background-color: #f5f7fa;
   padding-bottom: 1.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .demo-section > h2 {
@@ -420,14 +454,9 @@
   font-size: 3rem;
   padding: 1rem 20rem 1rem 20rem;
   margin-bottom: 0px;
+  color: #263238;
 }
-
-.demo-section > button {
-  margin: 0rem 35rem; /**/
-  height: 1rem;
-}
-
-/*Footer*/
+/*--------------FOOTER--------------*/
 
 .footer-container {
   display: grid;
@@ -491,4 +520,253 @@
 .footer-column > .input-container > img {
   position: relative;
   left: 1.5rem;
+}
+
+/*########################################### MEDIA QUERY ###########################################*/
+@media only screen and (max-width: 768px) {
+  /*--------------Navbar--------------*/
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-menu {
+    width: 100%;
+    padding: 0rem;
+    flex-direction: column;
+    background-color: #f6f7fb;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .navbar > .nav-account {
+    padding: 1rem;
+  }
+  /*--------------Home--------------*/
+
+  .home {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .home > .text-area {
+    padding: 0rem;
+  }
+  .home > .text-area > .title {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .home > .text-area > .title .green-title {
+    font-size: 3rem;
+  }
+  .green-title {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .illustration > img {
+    width: 20rem;
+    padding: 0rem;
+  }
+
+  /*--------------Clients--------------*/
+
+  .clients > .logos {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  /*--------------Community--------------*/
+  .community {
+    flex-direction: column;
+  }
+
+  .community > h2 {
+    padding: 1rem;
+  }
+
+  /*--------------Membership--------------*/
+  .community-services {
+    display: block;
+    padding: 1rem;
+  }
+
+  /*--------------pixelgrade-container--------------*/
+
+  .pixelgrade-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .pixelgrade-container > .pixelgrade-image {
+    padding: 0rem;
+  }
+
+  /*--------------nexcent-data-container--------------*/
+  .nexcent-data-container {
+    flex-direction: column;
+
+    display: grid;
+  }
+  .nexcent-data-container > .info-grid > .data-logo {
+    flex-shrink: 1;
+  }
+  .nexcent-data-container > .nexcent-grid-container {
+    gap: 1rem;
+    padding: 0rem;
+  }
+  .nexcent-data-container > .nexcent-grid-container > .info-grid > div > h4 {
+    font-size: 1.3rem;
+  }
+
+  .info-grid > .data-logo {
+    display: flex;
+    padding: 0rem;
+  }
+  .info-grid > div > h4 {
+    font-size: 1rem;
+    margin: 0rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .info-grid > div > p {
+    font-size: 16px;
+
+    margin: 0rem;
+    font-size: 16px;
+    font-weight: 200;
+  }
+  /*--------------MobileSecurity--------------*/
+
+  .mobile-security {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .mobile-security > .mobile-login-text > h3 {
+    font-size: 2rem;
+  }
+
+  /*--------------Customers--------------*/
+  .customers {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem 1rem;
+  }
+  .customers > div > .customer-review {
+    line-height: 1.5rem;
+    padding: 0rem 1rem;
+  }
+
+  .customers > div > .green-sign {
+    text-align: end;
+    padding: 0rem 1rem;
+  }
+  .customers > div > .customer-association {
+    padding: 0rem 1rem;
+  }
+  .customers > div > .customer-logos {
+    display: grid;
+    padding: 3rem 1rem 1rem 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  /*--------------Care Marketing--------------*/
+  .care-marketing {
+    padding: 1rem;
+  }
+
+  /*--------------Readmore--------------*/
+  .readmore-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .readmore-container > .readmore-card {
+    margin-bottom: 6rem;
+  }
+  .readmore-container > .readmore-card > .readmore-textbox {
+    padding: 1rem 0rem 1rem 0rem;
+  }
+
+  /*--------------Demo Section--------------*/
+
+  .demo-section {
+    padding: 1rem;
+  }
+  .demo-section > h2 {
+    padding: 1rem;
+    text-align: start;
+  }
+  .demo-section > .green-btn {
+    padding: 1rem;
+    margin: auto;
+  }
+
+  /*--------------Footer--------------*/
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.2rem;
+    padding: 1rem;
+  }
+
+  .footer-container > .nexcent-footer-container {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / span 2;
+
+    align-items: center;
+  }
+
+  .footer-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-container > .footer-newsletter {
+    grid-column: 1 / span 2;
+
+    align-items: center;
+  }
+  .footer-container > div > .socials {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+  }
+}
+/*########################################### END MEDIA QUERY ###########################################*/
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*small screen*/
+@media only screen and (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+/*medium screen*/
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 746px;
+  }
+}
+/*large screen*/
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+/*extra large screen*/
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
 }
