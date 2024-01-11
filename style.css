@@ -1,6 +1,6 @@
 * {
   font-family: "Inter", sans-serif;
-  justify-content: center;
+  margin: 0;
 }
 
 /*--------------NAVBAR--------------*/
@@ -119,12 +119,10 @@
 /*--------------CLIENTS--------------*/
 
 .clients {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  text-align: center;
-  width: 80%;
-  left: 10%;
-  right: 10%;
-  gap: 8px;
+  margin: auto;
   padding: 1rem 0rem;
 }
 
@@ -150,6 +148,22 @@
   position: relative;
   justify-content: space-between;
   padding: 2rem 0rem;
+  margin: auto;
+  /* width: 100%; */
+  flex-wrap: wrap;
+  gap: 3px;
+
+}
+.single-logo{
+  display: inline-block;
+  width: 23%;
+}
+@media screen and (min-width: 768px) {
+  .clients > .logos {
+    padding: 2rem 0rem;
+    flex-wrap: wrap;
+  }
+  
 }
 
 /*--------------COMMUNITY--------------*/
@@ -261,13 +275,17 @@
 }
 
 .nexcent-grid-container {
-  display: grid;
-
-  align-content: center;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   padding: 3rem;
   justify-content: space-between;
+}
+@media screen and (min-width:768px) {
+  .nexcent-grid-container{
+    flex-direction: row;
+  }
+  
 }
 .nexcent-grid-container > .info-grid > div h4 {
   margin: 0rem;
@@ -410,7 +428,7 @@
 }
 .readmore-pic {
   height: auto;
-  width: auto;
+  width: 100%;
 }
 
 .readmore-textbox {
@@ -566,13 +584,6 @@
 
   /*--------------Clients--------------*/
 
-  .clients > .logos {
-    display: grid;
-    padding: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-  }
-
   /*--------------Community--------------*/
   .community {
     flex-direction: column;
@@ -602,16 +613,12 @@
   /*--------------nexcent-data-container--------------*/
   .nexcent-data-container {
     flex-direction: column;
-
     display: grid;
   }
   .nexcent-data-container > .info-grid > .data-logo {
     flex-shrink: 1;
   }
-  .nexcent-data-container > .nexcent-grid-container {
-    gap: 1rem;
-    padding: 0rem;
-  }
+  
   .nexcent-data-container > .nexcent-grid-container > .info-grid > div > h4 {
     font-size: 1.3rem;
   }
@@ -763,6 +770,7 @@
   .container {
     max-width: 1024px;
   }
+  
 }
 /*extra large screen*/
 @media only screen and (min-width: 1280px) {
